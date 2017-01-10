@@ -4,6 +4,7 @@ title:      OpenSSL SAN 证书
 subtitle:   使用 OpenSSL 制作一个包含 SAN（Subject Alternative Name）的证书
 date:       2015-09-29 21:00:00
 author:     Liao
+catalog:    true
 header-img: img/post-bg-2015.jpg
 permalink:  /openssl-san/
 tags:

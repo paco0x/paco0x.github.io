@@ -4,6 +4,7 @@ title:      计算机原理 —— 主板与内存映射
 subtitle:   "Motherboard and memory map"
 date:       2015-04-29 23:00:00
 author:     Liao
+catalog:    true
 header-img: img/post-bg-2015.jpg
 permalink:  /motherboard-and-memory-map/
 tags:

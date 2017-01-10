@@ -4,6 +4,7 @@ title:      高可用集群基本概念
 subtitle:   "High availability"
 date:       2015-05-31 23:00:00
 author:     Liao
+catalog:    true
 header-img: img/post-bg-2015.jpg
 permalink:  /high-availability/
 tags:

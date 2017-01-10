@@ -4,6 +4,7 @@ title:      Nginx 配置详解
 subtitle:   "Nginx intro"
 date:       2015-06-06 23:00:00
 author:     Liao
+catalog:    true
 header-img: img/post-bg-2015.jpg
 permalink:  /nginx-intro/
 tags:

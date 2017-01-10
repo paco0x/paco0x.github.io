@@ -4,6 +4,7 @@ title:      "文件共享服务 FTP，NFS 和 Samba"
 subtitle:   ""
 date:       2015-05-05 22:15:00
 author:     Liao
+catalog:    true
 header-img: img/post-bg-2015.jpg
 permalink:  /ftp-nfs-samba/
 tags:

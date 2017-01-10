@@ -4,6 +4,7 @@ title:      "我的 Sublime Text 常用插件"
 subtitle:   "The text editor you'll fall in love with"
 date:       2014-11-13 24:00:00
 author:     Liao
+catalog:    true
 header-img: img/post-bg-2015.jpg
 permalink:  /sublime-text-intro/
 tags:

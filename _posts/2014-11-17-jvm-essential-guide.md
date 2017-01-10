@@ -4,6 +4,7 @@ title:      "JVM 基本指南"
 subtitle:   "小白学JVM"
 date:       2014-11-17 22:12:03
 author:     Liao
+catalog:    true
 header-img: img/post-bg-2015.jpg
 permalink:  /jvm-essential-guide/
 tags:

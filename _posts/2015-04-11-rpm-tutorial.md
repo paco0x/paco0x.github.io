@@ -4,6 +4,7 @@ title:      "RPM 入门"
 subtitle:   "Redhat Package Management System"
 date:       2014-11-13 23:00:00
 author:     Liao
+catalog:    true
 header-img: img/post-bg-2015.jpg
 permalink:  /linux-rpm/
 tags:

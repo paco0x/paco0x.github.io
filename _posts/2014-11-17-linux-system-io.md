@@ -4,6 +4,7 @@ title:      "Linux 性能优化之 IO 子系统"
 subtitle:   "Dive into IO subsystem"
 date:       2014-11-17 23:51:00
 author:     Liao
+catalog:    true
 header-img: img/post-bg-2015.jpg
 permalink:  /linux-system-io/
 tags:

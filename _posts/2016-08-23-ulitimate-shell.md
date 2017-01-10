@@ -4,6 +4,7 @@ title:      究极shell
 subtitle:   Finally, a command line shell for the 90s
 date:       2016-08-22 13:10:00
 author:     Liao
+catalog:    true
 header-img: img/post-ultimate-shell.jpg
 permalink:  /ultimate-shell/
 tags:

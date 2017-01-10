@@ -4,6 +4,7 @@ title:      用 awk 实现一个关系型数据库
 subtitle:   "AWK & relational DB"
 date:       2015-05-21 23:00:00
 author:     Liao
+catalog:    true
 header-img: img/post-bg-2015.jpg
 permalink:  /awk-relational-db/
 tags:

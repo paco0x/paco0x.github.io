@@ -4,6 +4,7 @@ title:      "Cacti 使用中无数据的问题的总结"
 subtitle:   "Debug in Cacti"
 date:       2014-12-18 22:15:00
 author:     Liao
+catalog:    true
 header-img: img/post-bg-2015.jpg
 permalink:  /cacti-no-data-problem/
 tags:
