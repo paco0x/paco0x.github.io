@@ -10,7 +10,7 @@ tags:
     - OpenStack
 ---
 
-RabbitMQ 是一个消息队列系统，他实现了 AMQP 协议。在 OpenStack 中，RabbitMQ 被广泛的作为 RPC 中间件使用，在 OpenStack 核心项目如 Nova, Cinder, Neutron 等服务中，内部组件的 RPC 调用都是通过消息队列完成的，而 RabbitMQ 是 OpenStack 场景下使用最为广泛的消息队列组件。
+RabbitMQ 是一个消息队列系统，它实现了 AMQP 协议。在 OpenStack 中，RabbitMQ 被广泛的作为 RPC 中间件使用，在 OpenStack 核心项目如 Nova, Cinder, Neutron 等服务中，内部组件的 RPC 调用都是通过消息队列完成的，而 RabbitMQ 是 OpenStack 场景下使用最为广泛的消息队列组件。
 
 RabbitMQ 本质上是一个消息的代理服务器（broker），它使用 AMQP 协议来完成消息的路由和交换。这里会解释一下 AMQP 中的基本概念，如果想深入学习 RabbitMQ，可以先从官方的文档开始：https://www.rabbitmq.com/tutorials/tutorial-one-python.html
 
