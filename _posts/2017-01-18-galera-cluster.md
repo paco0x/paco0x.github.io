@@ -142,7 +142,7 @@ Galera Cluster 集群中，当新加入一个节点时，此节点需要从集�
 
 * 加入节点的 state UUID 必须和此集群的相同（即加入节点曾经属于此集群）
 * 加入节点所缺失的数据都在 donor 节点的 write-set cache 中存在
-* 使用 IST 最重要的参数是 donor 节点的  gcache.size 大小，这个参数表示从系统内存中分配多少大小用于缓存 write set。缓存的空间越多，能够使用 IST 的几率就越大。
+* 使用 IST 最重要的参数是 donor 节点的  `gcache.size` 大小，这个参数表示从系统内存中分配多少大小用于缓存 write set。缓存的空间越多，能够使用 IST 的几率就越大。
 
 ### Write-set Cache(GCache)
 Galera Cluster 中存储 write-sets 的特殊缓存叫做 Write-set Cache 或 GCache. Galera Cluster 为了减少内存的使用，会将内存中的 write-set 写入到磁盘中。
@@ -196,14 +196,14 @@ $ yum -y install MariaDB-server galera
 
 ```
 wsrep_on = ON
-binlog_format=ROW                                                                                          使用 gelera cluster 建议将二进制日志设置为 ROW 格式的
-default_storage_engine=innodb                                                                       必须使用事务性存储引擎
-innodb_autoinc_lock_mode=2                                                                          自增键的锁模式，防止主键冲突
-wsrep_provider=/usr/lib64/galera/libgalera_smm.so                                        wsrep 插件库文件位置
-wsrep_provider_options="gcache.size=300M; gcache.page_size=1G"            wsrep 的配置选项，可以设置 GCache 的大小
-wsrep_cluster_name="example_cluster"                                                          集群的名字
-wsrep_cluster_address="gcomm://IP.node1,IP.node2,IP.node3"                     集群所有节点的 IP 地址
-wsrep_sst_method=rsync                                                                                 SST 的复制方式
+binlog_format=ROW                  #使用 gelera cluster 建议将二进制日志设置为 ROW 格式的
+default_storage_engine=innodb      #必须使用事务性存储引擎
+innodb_autoinc_lock_mode=2         #自增键的锁模式，防止主键冲突
+wsrep_provider=/usr/lib64/galera/libgalera_smm.so     #wsrep 插件库文件位置
+wsrep_provider_options="gcache.size=300M; gcache.page_size=1G"  #wsrep 的配置选项，可以设置 GCache 的大小
+wsrep_cluster_name="example_cluster"   #集群的名字
+wsrep_cluster_address="gcomm://IP.node1,IP.node2,IP.node3"      #集群所有节点的 IP 地址
+wsrep_sst_method=rsync             #SST 的复制方式
 ```
 
 ### 初始化
@@ -219,7 +219,7 @@ $ gelera_new_cluster
 将一个节点初始化为 Primary Component 后，可以通过 `wsrep_cluster_size` 状态变量的值来查看集群中有效节点的数量：
 
 ```
-SHOW STATUS LIKE 'wsrep_cluster_size';
+mysql> SHOW STATUS LIKE 'wsrep_cluster_size';
 +--------------------+-------+
 | Variable_name      | Value |
 +--------------------+-------+
@@ -285,6 +285,7 @@ Galera Cluster 的配置是一个相对复杂的过程，使用 Puppet 可以一
 可以参考：
 
 [puppet-galera 模块](https://github.com/fuel-infra/puppet-galera.git)
+
 [fuel 的部署代码（包含 pacemaker/corosync）](https://github.com/openstack/fuel-library/blob/master/deployment/puppet/osnailyfacter/manifests/database/database.pp)
 
 # 高可用方案和部署策略
@@ -408,6 +409,10 @@ listen mysql
 即使使用了 galera cluster，如果出现了集群全部节点宕机的情况，那么此时就需要人工找到数据量最多的节点（最后宕的节点），以此为初始节点，然后启动整个集群。这些人工操作能否通过自动化的方式完成呢？
 
 答案是可以的，Fuel 已经使用 pacemaker + 自定义脚本实现了此功能，通过 pacemaker 管理 Galera 集群，能够做到集群的自动恢复，故障转移等功能。脚本的地址在：[https://github.com/openstack/fuel-library/blob/master/files/fuel-ha-utils/ocf/mysql-wss](https://github.com/openstack/fuel-library/blob/master/files/fuel-ha-utils/ocf/mysql-wss)，这里不进行详细赘述了。
+
+最终，我们实现的高可用方案架构如下所示：
+
+![](../img/in-post/galera-cluster/ha-arch.png)
 
 # Galera Cluster 使用的一些问题探讨
 
