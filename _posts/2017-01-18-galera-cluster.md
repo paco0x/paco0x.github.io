@@ -404,6 +404,8 @@ listen mysql
 
 最后，不要忘了对 HAProxy 本身进行高可用。可以使用 pacemaker/keepalived 等软件实现。
 
+除了使用 HAProxy + 自定义检查脚本的方式之外，还可以使用 ProxySQL 作为 MySQL 的代理，具体的使用方式可以参考[这里](http://www.proxysql.com/blog/galera-awareness-and-proxysql-scheduler)。
+
 ## 集群的自动恢复
 
 即使使用了 galera cluster，如果出现了集群全部节点宕机的情况，那么此时就需要人工找到数据量最多的节点（最后宕的节点），以此为初始节点，然后启动整个集群。这些人工操作能否通过自动化的方式完成呢？
