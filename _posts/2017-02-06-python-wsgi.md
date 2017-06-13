@@ -214,7 +214,7 @@ class WSGIServer(object):
         # 构造响应的 WSGI 环境变量
         env = {
         		'wsgi.version': (1, 0),
-        		'wsgi.url_scheme: 'http',
+        		'wsgi.url_scheme': 'http',
         		'wsgi.input': StringIO.StringIO(self.request_data),
         		'wsgi.errors': sys.stderr,
         		'wsgi.multithread': False,
