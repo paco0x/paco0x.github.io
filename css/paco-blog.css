@@ -1,3 +1,8 @@
+/*!
+ * Paco Blog v1.7.0 (http://liaoph.com)
+ * Copyright 2019 paco <liaoishere@gmail.com>
+ */
+
 @media (min-width: 1200px) {
   .post-container,
   .sidebar-container {
@@ -141,7 +146,7 @@ body {
   overflow-x: hidden;
 }
 p {
-  margin: 30px 0;
+  margin: 15px 0;
 }
 h1,
 h2,
@@ -263,7 +268,7 @@ pre code {
 }
 .post-container ul,
 .post-container ol {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 768px) {
   .post-container ul,

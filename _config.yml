@@ -32,9 +32,9 @@ anchorjs: true                          # if you want to customize anchor. check
 
 
 
-# Gems
+# Plugins
 # from PR#40, to support local preview for Jekyll 3.0
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-feed
 
@@ -73,7 +73,7 @@ ba_track_id: ca24cc0fb86c19c1a88f5f7a020629d3
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Proudly uncool and out of fashion"
-sidebar-avatar: /img/avatar-liao.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
