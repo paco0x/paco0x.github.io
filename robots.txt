@@ -1,0 +1,1 @@
+disallow: /all-about-love.html
